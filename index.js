@@ -27,8 +27,8 @@ frutas.push (new Alimento ("Arándano", 0.66, "taza", 100, "gr"));
 frutas.push (new Alimento ("Bluberrie", null, null, 107, "gr"));
 frutas.push (new Alimento ("Cereza", 20, "pieza", 88, "gr"));
 frutas.push (new Alimento ("Ciruela", 1, "taza", 150, "gr"));
-frutas.push (new Alimento ("Ciruela pasa", null, null, 56, ""));
-frutas.push (new Alimento ("Ciruela roja", null, null, 198, ""));
+frutas.push (new Alimento ("Ciruela pasa", null, null, 56, "gr"));
+frutas.push (new Alimento ("Ciruela roja", null, null, 198, "gr"));
 frutas.push (new Alimento ("Dátil", 2, "pieza", 18, "gr"));
 frutas.push (new Alimento ("Duranzno", 2, "pieza", 156, "gr"));
 frutas.push (new Alimento ("Frambuesa", 1, "taza", 123, "gr"));
@@ -247,13 +247,22 @@ let grupoDeAlimento = 0;
 let alimentoIngresado = 0;
 let porcionIngresada = 0;
 
-//Funciones para recorrer alimentos
+//Funcion para porcionar alimento
 
-//function PorcionarAlimento (){
-//    let
-//}
 
-//Funciones para agregar un nuevo alimento
+function porcionarAlimento () {
+    grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Regresar al inicio"));
+    if (grupoDeAlimento === 1){
+        console.table (frutas);
+        porcionIngresada = parseInt (prompt ("¿Cuál es la porción qué vas a mandar?"));
+        this.cantidad = function (){
+            this.cantidad = this.cantidad * (porcionIngresada);
+        }
+        console.table(frutas);
+    } 
+} 
+
+/*Funciones para agregar un nuevo alimento
 
 function AgregarNuevoLacteo (){
     let continuar = false;
@@ -374,13 +383,14 @@ function AgregarNuevoGrasas (){
     }
 
 }
+*/
 
 function modoDeUso (){
     let modalidad = parseInt (prompt("Agregar un nuevo alimento a tu conversor ingresa: 1 \n\Saber qué cantidades mandar a tus pacientes ingresa: 2"));
     if (modalidad === 2) {
-
-    }
-    if (modalidad === 1){
+        porcionarAlimento();
+    }}
+    /*else if (modalidad === 1){
         grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Regresar al inicio"));
         } if (grupoDeAlimento === 1) {
             AgregarNuevoFruta ();
@@ -407,7 +417,7 @@ function modoDeUso (){
             }
         }
     
-}
+}*/
 
 
 
@@ -428,7 +438,7 @@ function Bienvenida () {
 
 }
 
-Bienvenida()
+Bienvenida();
 modoDeUso();
 
 
