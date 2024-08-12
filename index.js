@@ -1,11 +1,3 @@
-/*
-alert ("Bienvenido a tu conversor de alimentos");
-alert ("Cuando no tengas una alimento en tu cocina, n/podrás reemplazar tus porciones de alimentos sugeridas por otros n/del mismo grupo de alimentos");
-alert ("Además podrás encontrar algunas recetas para darte ideas para cocinar");
-
-let grupoDeAlimento = prompt ("¿Qué grupo de alimento quieres explorar?");
-let alimentoIngresado = prompt ("¿Qué alimento quieres reemplazar?");
-let porcionIngresada = prompt ("¿Cuál es la poción indicada?");*/
 
 //Clase constructora para alimentos
 class Alimento {
@@ -249,6 +241,167 @@ lacteos.push (new Alimento ("Leche humana", 1, "taza", 240, "ml"));
 lacteos.push (new Alimento ("Leche semidescremada", 1, "taza", 250, "ml"));
 lacteos.push (new Alimento ("Yogurt natural", 0.2, "taza", 230, "gr"));
 lacteos.push (new Alimento ("yogurt griego", 0.33, "taza", 80, "gr"));
+
+let tipoDeUsuario = 0;
+let grupoDeAlimento = 0;
+let alimentoIngresado = 0;
+let porcionIngresada = 0;
+
+
+function AgregarNuevoLacteo (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = lacteos;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(lacteos);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function AgregarNuevoFruta (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = frutas;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(frutas);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function AgregarNuevoVerduras (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = verduras;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(verduras);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function AgregarNuevoCereales (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = cereales;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(cereales);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function AgregarNuevoLeguminosas (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = leguminosas;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(leguminosas);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function AgregarNuevoOrigenAnimal (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = origenAnimal;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(origenAnimal);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function AgregarNuevoAzucar (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = azucar;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(azucar);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function AgregarNuevoGrasas (){
+    let continuar = true;
+
+    while (continuar) {
+        let grupoDeAlimento = grasas;
+        let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
+        grupoDeAlimento.push (nuevoAlimento);
+        console.log(grasas);
+        continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
+    }
+
+}
+
+function modoDeUso (){
+    let modalidad = parseInt (prompt("Para agregar un nuevo alimento a tu conversor ingresa: 1 \n\Para saber qué cantidades mandar a tus pacientes ingresa:2"));
+    if (modalidad === 1){
+        grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Regresar al inicio"));
+    } if (grupoDeAlimento === 1) {
+        AgregarNuevoFruta ();
+    } else if(grupoDeAlimento === 2) {
+        AgregarNuevoVerduras ();
+    } else if (grupoDeAlimento === 3) {
+        AgregarNuevoCereales ();
+    } else if (grupoDeAlimento === 4) {
+        AgregarNuevoLeguminosas ();
+    } else if (grupoDeAlimento === 5) {
+        AgregarNuevoOrigenAnimal ();
+    } else if (grupoDeAlimento === 6) {
+        AgregarNuevoLacteo ();
+    } else if (grupoDeAlimento === 7) {
+        AgregarNuevoAzucar ();
+    } else if (grupoDeAlimento === 8) {
+        AgregarNuevoGrasas ();
+    }else if (grupoDeAlimento === 0) {
+        Bienvenida()
+    }else {
+        while (grupoDeAlimento <= 0 || grupoDeAlimento >= 9) {
+            grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas"));
+        }
+    }
+}
+
+
+
+
+function Bienvenida () {
+    alert ("Bienvenido a tu conversor de alimentos, Nutri");
+    tipoDeUsuario = parseFloat(prompt("Qué tipo de usuario eres? \n\ 1 - Nutriologa \n\ 2 - Paciente"))
+    if (tipoDeUsuario == 1){
+        alert ("Hola Nutri, dentro de esta opción podrás ingresar nuevas equivalencias para tus pacientes");
+    } else if (tipoDeUsuario == 2){
+        alert ("Hola Paciente, dentro de esta opción podrás sacar las cantidades de alimentos que puedes comer de acuerdo a lo que tu Nutri te mandó");
+    } else {
+        while (tipoDeUsuario != 1 || tipoDeUsuario !=2) {
+            tipoDeUsuario = parseFloat(prompt("Qué tipo de usuario eres? \n\ 1 - Nutriologa \n\ 2 - Paciente"));
+        }
+    }
+
+}
+
+modoDeUso();
+
+
 
 
 
