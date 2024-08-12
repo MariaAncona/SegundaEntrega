@@ -1,4 +1,9 @@
 
+let tipoDeUsuario = 0;
+let grupoDeAlimento = 0;
+let alimentoIngresado = 0;
+let porcionIngresada = 0;
+
 //Clase constructora para alimentos
 class Alimento {
     constructor (nombre, cantidad, medida, peso, medidapeso){
@@ -7,6 +12,18 @@ class Alimento {
         this.medida = medida;
         this.peso = parseFloat(peso);
         this.medidapeso = medidapeso;
+    }
+
+    porcionarCantidad() {
+        this.cantidad = this.cantidad * parseInt(porcionIngresada);
+    }
+
+    porcionarPeso() {
+        this.peso = this.peso * parseInt(porcionIngresada);
+    }
+
+    resultadoNutri (){
+        console.log ("Para cumplir la porción ingresada de: " +this.nombre + " agrega a tu menú " +this.cantidad + this.medida + " o " + this.peso + this.medidapeso);
     }
 }
         
@@ -242,27 +259,76 @@ lacteos.push (new Alimento ("Leche semidescremada", 1, "taza", 250, "ml"));
 lacteos.push (new Alimento ("Yogurt natural", 0.2, "taza", 230, "gr"));
 lacteos.push (new Alimento ("yogurt griego", 0.33, "taza", 80, "gr"));
 
-let tipoDeUsuario = 0;
-let grupoDeAlimento = 0;
-let alimentoIngresado = 0;
-let porcionIngresada = 0;
 
-//Funcion para porcionar alimento
+
+//Función para porcionar alimento para Nutri
 
 
 function porcionarAlimento () {
-    grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Regresar al inicio"));
+    grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Salir"));
     if (grupoDeAlimento === 1){
-        console.table (frutas);
-        porcionIngresada = parseInt (prompt ("¿Cuál es la porción qué vas a mandar?"));
-        this.cantidad = function (){
-            this.cantidad = this.cantidad * (porcionIngresada);
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of frutas){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso ();
+            porcion.resultadoNutri ();
         }
-        console.table(frutas);
-    } 
-} 
+        
+    } else if (grupoDeAlimento === 2){
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of verduras){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso();
+        }
+        console.table(verduras);
+    } else if (grupoDeAlimento === 3){
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of cereales){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso();
+        }
+        console.table(cereales);
+    } else if (grupoDeAlimento === 4){
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of leguminosas){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso();
+        }
+        console.table(leguminosas);
+    } else if (grupoDeAlimento === 5){
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of origenAnimal){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso();
+        }
+        console.table(origenAnimal);
+    } else if (grupoDeAlimento === 6){
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of lacteos){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso();
+        }
+        console.table(lacteos);
+    } else if (grupoDeAlimento === 7){
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of azucar){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso();
+        }
+        console.table(azucar);
+    } else if (grupoDeAlimento === 8){
+        porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
+        for (const porcion of grasas){
+            porcion.porcionarCantidad();
+            porcion.porcionarPeso();
+        }
+        console.table(grasas);
+    } else {
+        Bienvenida();
+    }
+}
 
-/*Funciones para agregar un nuevo alimento
+//Funciones para agregar un nuevo alimento
 
 function AgregarNuevoLacteo (){
     let continuar = false;
@@ -383,14 +449,15 @@ function AgregarNuevoGrasas (){
     }
 
 }
-*/
+
 
 function modoDeUso (){
-    let modalidad = parseInt (prompt("Agregar un nuevo alimento a tu conversor ingresa: 1 \n\Saber qué cantidades mandar a tus pacientes ingresa: 2"));
-    if (modalidad === 2) {
+    let modalidad = parseInt (prompt("1: Agregar un nuevo alimento a tu conversor ingresa \n\ 2: Saber qué cantidades mandar a tus pacientes ingresa \n\ 3:Salir"));
+    if (modalidad === 3){
+        Bienvenida();
+    } else if (modalidad === 2) {
         porcionarAlimento();
-    }}
-    /*else if (modalidad === 1){
+    }else if (modalidad === 1){
         grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Regresar al inicio"));
         } if (grupoDeAlimento === 1) {
             AgregarNuevoFruta ();
@@ -417,29 +484,29 @@ function modoDeUso (){
             }
         }
     
-}*/
+}
 
 
 
 
 
 function Bienvenida () {
-    tipoDeUsuario = parseFloat(prompt("Qué tipo de usuario eres? \n\ 1 - Nutriologa \n\ 2 - Paciente"))
+    tipoDeUsuario = parseFloat(prompt("Qué tipo de usuario eres? \n\ 1: Nutriologa \n\ 2: Paciente"))
     if (tipoDeUsuario == 1){
         alert ("Bienvenido a tu conversor de alimentos, Nutri");
         modoDeUso();
     } else if (tipoDeUsuario == 2){
-        alert ("Hola Paciente, dentro de esta opción podrás sacar las cantidades de alimentos que puedes comer de acuerdo a lo que tu Nutri te mandó");
+        alert ("Hola Paciente, aquí podrás ver grupos de alimentos o alimentos específicos y saber la porción de acuerdo a lo que Nutrióloga te mandó");
     } else {
         while (tipoDeUsuario != 1 || tipoDeUsuario !=2) {
-            tipoDeUsuario = parseFloat(prompt("Qué tipo de usuario eres? \n\ 1 - Nutriologa \n\ 2 - Paciente"));
+            tipoDeUsuario = parseFloat(prompt("Qué tipo de usuario eres? \n\ 1: Nutriologa \n\ 2: Paciente"));
         }
     }
 
 }
 
 Bienvenida();
-modoDeUso();
+
 
 
 
