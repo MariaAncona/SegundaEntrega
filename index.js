@@ -335,8 +335,11 @@ function porcionarAlimento () {
             porcion.resultadoNutri ();
         }
         console.table(grasas);
-    } else {
+    }  else if (grupoDeAlimento === 0){
+        alert ("Hasta pronto");
         Bienvenida();
+    } else {
+        porcionarAlimento ();
     }
 }
 
@@ -408,8 +411,11 @@ function porcionarAlimentoPaciente () {
             porcion.resultadoPaciente ();
         }
         console.table(grasas);
-    } else {
+    } else if (grupoDeAlimento === 0){
+        alert ("Hasta pronto");
         Bienvenida();
+    } else {
+        porcionarAlimentoPaciente();
     }
 }
 
@@ -608,9 +614,10 @@ function AgregarNuevoLacteo (){
         grupoDeAlimento = lacteos;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (lacteos);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (lacteos);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -728,7 +735,7 @@ function modoDeUsoNutri (){
     if (modalidad === 0){
         Bienvenida();
     } else if (modalidad === 2) {
-        porcionarAlimentoPaciente ();
+        porcionarAlimento ();
     }else if (modalidad === 1){
         grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Regresar al inicio"));
         } if (grupoDeAlimento === 1) {
@@ -743,12 +750,12 @@ function modoDeUsoNutri (){
             AgregarNuevoOrigenAnimal ();
         } else if (grupoDeAlimento === 6) {
             AgregarNuevoLacteo ();
-            console.log (lacteos);
         } else if (grupoDeAlimento === 7) {
             AgregarNuevoAzucar ();
         } else if (grupoDeAlimento === 8) {
             AgregarNuevoGrasas ();
         }else if (grupoDeAlimento === 0) {
+            alert ("Hasta luego");
             Bienvenida()
         }else {
             while (grupoDeAlimento <= 0 || grupoDeAlimento >= 9) {
@@ -763,6 +770,7 @@ function modoDeUsoNutri (){
 function modoDeUsoPaciente (){
     let modalidad = parseInt (prompt(" "+"1: Saber tus porciones para cada alimento \n\ 2: Buscar un alimento y conocer cantidades por porción \n\ 0: Salir"));
     if (modalidad === 0){
+        alert ("Hasta luego");
         Bienvenida();
     } else if (modalidad === 2) {
         buscarAlimentosPaciente();
