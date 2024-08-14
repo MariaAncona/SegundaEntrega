@@ -630,9 +630,10 @@ function AgregarNuevoFruta (){
         grupoDeAlimento = frutas;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (frutas);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (frutas);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -645,9 +646,10 @@ function AgregarNuevoVerduras (){
         grupoDeAlimento = verduras;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (verduras);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (verduras);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -660,9 +662,10 @@ function AgregarNuevoCereales (){
         grupoDeAlimento = cereales;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (cereales);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (cereales);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -675,9 +678,10 @@ function AgregarNuevoLeguminosas (){
         grupoDeAlimento = leguminosas;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (leguminosas);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (leguminosas);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -690,9 +694,10 @@ function AgregarNuevoOrigenAnimal (){
         grupoDeAlimento = origenAnimal;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (origenAnimal);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (origenAnimal);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -705,9 +710,10 @@ function AgregarNuevoAzucar (){
         grupoDeAlimento = azucar;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (azucar);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (azucar);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -720,9 +726,10 @@ function AgregarNuevoGrasas (){
         grupoDeAlimento = grasas;
         let nuevoAlimento = new Alimento (nombre = prompt ("Ingresa el nombre del alimento"), cantidad = prompt ("Ingresa la cantidad"), medidad = prompt ("Ingresa la medida"), peso = prompt ("Ingresa el peso"), medidapeso = prompt ("Ingresa la unidad de peso"));
         grupoDeAlimento.push (nuevoAlimento);
+        console.log (grasas);
         continuar = confirm("¿Deseas ingresar otro alimento a este grupo?");
     } while (continuar) {
-        console.log (grasas);
+        alert ("Hasta luego");
         Bienvenida();
     }
 
@@ -733,6 +740,7 @@ function AgregarNuevoGrasas (){
 function modoDeUsoNutri (){
     let modalidad = parseInt (prompt(" "+"1: Agregar un nuevo alimento a tu conversor ingresa \n\ 2: Saber qué cantidades mandar a tus pacientes ingresa \n\ 0: Salir"));
     if (modalidad === 0){
+        alert ("Hasta luego");
         Bienvenida();
     } else if (modalidad === 2) {
         porcionarAlimento ();
