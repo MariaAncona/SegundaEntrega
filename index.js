@@ -302,7 +302,7 @@ function porcionarAlimento () {
             const salirDeVerduras = parseInt (prompt ("¿Quiere saber de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
             if (salirDeVerduras ===1) {
                 porcionarAlimento ();
-            } else {
+            } else if (salirDeVerduras === 2) {
                 alert ("Vuelve pronto");
                 Bienvenida ();
             }
@@ -778,7 +778,7 @@ function AgregarNuevoGrasas (){
 //Modo de usos para Paciente
 
 function modoDeUsoNutri (){
-    let modalidad = parseInt (prompt(" "+"1: Agregar un nuevo alimento a tu conversor ingresa \n\ 2: Saber qué cantidades mandar a tus pacientes ingresa \n\ 0: Salir"));
+    const modalidad = parseInt (prompt(" "+"1: Agregar un nuevo alimento a tu conversor ingresa \n\ 2: Saber qué cantidades mandar a tus pacientes ingresa \n\ 0: Salir"));
     if (modalidad === 0){
         alert ("Hasta luego");
         Bienvenida();
@@ -810,13 +810,13 @@ function modoDeUsoNutri (){
                 grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas"));
             }
         }
-    
 }
 
-//Modo de usos para Nutriologa 
+
+//Modo de usos para Paciente 
 
 function modoDeUsoPaciente (){
-    let modalidad = parseInt (prompt(" "+"1: Saber tus porciones para cada alimento \n\ 2: Buscar un alimento y conocer cantidades por porción \n\ 0: Salir"));
+    const modalidad = parseInt (prompt(" "+"1: Saber tus porciones para cada alimento \n\ 2: Buscar un alimento y conocer cantidades por porción \n\ 0: Salir"));
     if (modalidad === 0){
         alert ("Hasta luego");
         Bienvenida();
