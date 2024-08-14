@@ -277,32 +277,72 @@ function porcionarAlimento () {
             porcion.porcionarCantidad();
             porcion.porcionarPeso ();
             porcion.resultadoNutri ();
+        } const tablaFrutas = parseInt(prompt ("¿Quieres ver el resultado en tabla? \n\ 1: Sí \n\ 2: No"));
+        if (tablaFrutas === 1) {
+            console.table(frutas);
+        } else {
+            const salirDeFrutas = parseInt (prompt ("¿Quiere saber de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+            if (salirDeFrutas ===1) {
+                porcionarAlimento ();
+            } else {
+                alert ("Vuelve pronto");
+                Bienvenida ();
+            }
         }
-        
     } else if (grupoDeAlimento === 2){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
         for (const porcion of verduras){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoNutri ();
+        } const tablaVerduras = parseInt(prompt ("¿Quieres ver el resultado en tabla? \n\ 1: Sí \n\ 2: No"));
+        if (tablaVerduras === 1) {
+            console.table(verduras);
+        } else {
+            const salirDeVerduras = parseInt (prompt ("¿Quiere saber de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+            if (salirDeVerduras ===1) {
+                porcionarAlimento ();
+            } else {
+                alert ("Vuelve pronto");
+                Bienvenida ();
+            }
         }
-        console.table(verduras);
     } else if (grupoDeAlimento === 3){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
         for (const porcion of cereales){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoNutri ();
+        } const tablaCereales = parseInt(prompt ("¿Quieres ver el resultado en tabla? \n\ 1: Sí \n\ 2: No"));
+        if (tablaCereales === 1) {
+            console.table(cereales);
+        } else {
+            const salirDeCereales = parseInt (prompt ("¿Quiere saber de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+            if (salirDeCereales ===1) {
+                porcionarAlimento ();
+            } else {
+                alert ("Vuelve pronto");
+                Bienvenida ();
+            }
         }
-        console.table(cereales);
     } else if (grupoDeAlimento === 4){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
         for (const porcion of leguminosas){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoNutri ();
+        } const tablaLeguminosas = parseInt(prompt ("¿Quieres ver el resultado en tabla? \n\ 1: Sí \n\ 2: No"));
+        if (tablaLeguminosas === 1) {
+            console.table(leguminosas);
+        } else {
+            const salirDeLeguminosas= parseInt (prompt ("¿Quiere saber de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+            if (salirDeLeguminosas ===1) {
+                porcionarAlimento ();
+            } else {
+                alert ("Vuelve pronto");
+                Bienvenida ();
+            }
         }
-        console.table(leguminosas);
     } else if (grupoDeAlimento === 5){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción qué vas a mandar?"));
         for (const porcion of origenAnimal){
