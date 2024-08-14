@@ -417,96 +417,184 @@ function porcionarAlimentoPaciente () {
 
 function buscarAlimentosPaciente (){
     grupoDeAlimento = parseInt (prompt ("Ingresa el número del grupo de alimentos \n\ 1: Frutas \n\ 2: Verduras \n\ 3: Cereales \n\ 4: Leguminosas \n\ 5: Origen animal \n\ 6: Lácteos \n\ 7: Azúcar \n\ 8: Grasas \n\ 0: Salir"));
-                if (grupoDeAlimento === 1){
+            if (grupoDeAlimento === 1){
                 const frutaIngresada = prompt("Ingresa el alimento que buscas:").toLowerCase();
                 const frutaEncontrada = frutas.find (fruta => fruta.nombre.toLowerCase() == frutaIngresada);
-                if(frutaEncontrada) {
-                    console.log("fruta encontrada");
-                console.log (`Si quieres comer: ${frutaEncontrada.nombre}, la cantidad indicada por porción es: ${frutaEncontrada.cantidad} ${frutaEncontrada.medida} o ${frutaEncontrada.peso} ${frutaEncontrada.medidapeso}`);
-                const nuevoAlimento1 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
-                    if(nuevoAlimento1 === 1) {
-                        buscarAlimentosPaciente ();
+                    if(frutaEncontrada) {
+                    console.log (`Si quieres comer: ${frutaEncontrada.nombre}, la cantidad indicada por porción es: ${frutaEncontrada.cantidad} ${frutaEncontrada.medida} o ${frutaEncontrada.peso} ${frutaEncontrada.medidapeso}`);
+                    const nuevoAlimento1 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento1 === 1) {
+                            buscarAlimentosPaciente ();
+                        } else {
+                            alert ("Vuelve pronto");
+                            Bienvenida ();
+                        }
                     } else {
+                    console.log(`Lo sentimos, ${frutaEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento1 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento1 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
                         Bienvenida ();
-                    }
-                } else {
-                console.log(`Lo sentimos, ${frutaEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
-                const noEncontradoNuevoAlimento1 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
-                if(noEncontradoNuevoAlimento1 === 1) {
-                    buscarAlimentosPaciente ();
-                } else {
-                    Bienvenida ();
-                }
-                }      
-            } else if (grupoDeAlimento === 2){
+                        }
+                    }      
+            } else if (grupoDeAlimento === 2){ 
                 const verduraIngresada = prompt("Ingresa el alimento que buscas:").toLowerCase();
                 const verduraEncontrada = verduras.find (verdura => verdura.nombre.toLowerCase() == verduraIngresada);
-                if(verduraEncontrada) {
-                console.log (`Si quieres comer: ${verduraEncontrada.nombre}, la cantidad indicada por porción es: ${verduraEncontrada.cantidad} ${verduraEncontrada.medida} o ${verduraEncontrada.peso} ${verduraEncontrada.medidapeso}`);
-                const nuevoAlimento2 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
-                if(nuevoAlimento2 === 1) {
-                    buscarAlimentosPaciente ();
+                    if(verduraEncontrada) {
+                    console.log (`Si quieres comer: ${verduraEncontrada.nombre}, la cantidad indicada por porción es: ${verduraEncontrada.cantidad} ${verduraEncontrada.medida} o ${verduraEncontrada.peso} ${verduraEncontrada.medidapeso}`);
+                    const nuevoAlimento2 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento2 === 1) {
+                            buscarAlimentosPaciente ();
+                        } else {
+                            alert ("Vuelve pronto");
+                            Bienvenida ();
+                        }
                 } else {
-                    Bienvenida ();
-                }
-                } else {
-                console.log(`Lo sentimos, ${verduraEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
-                const noEncontradoNuevoAlimento2 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
-                if(noEncontradoNuevoAlimento2 === 1) {
-                    buscarAlimentosPaciente ();
-                } else {
-                    Bienvenida ();
-                }
-                } 
+                    console.log(`Lo sentimos, ${verduraEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento2 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento2 === 1) {
+                            buscarAlimentosPaciente ();
+                        } else {
+                            alert ("Vuelve pronto");
+                            Bienvenida ();
+                        }
+                    } 
             } else if (grupoDeAlimento === 3){
-                    const cerealIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
-                    const cerealEncontrado = cereales.find (cereal => cereal.nombre.toLowerCase() == cerealIngresado);
+                const cerealIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
+                const cerealEncontrado = cereales.find (cereal => cereal.nombre.toLowerCase() == cerealIngresado);
                     if(cerealEncontrado) {
                     console.log (`Si quieres comer: ${cerealEncontrado.nombre}, la cantidad indicada por porción es: ${cerealEncontrado.cantidad} ${cerealEncontrado.medida} o ${cerealEncontrado.peso} ${cerealEncontrado.medidapeso}`);
-                    } else {
+                    const nuevoAlimento3 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento3 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
+                } else {
                     console.log(`Lo sentimos, ${cerealEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento3 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento3 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } 
             } else if (grupoDeAlimento === 4){
-                    const leguminosaIngresada = prompt("Ingresa el alimento que buscas:").toLowerCase();
-                    const leguminosaEncontrada = leguminosas.find (leguminosa => leguminosa.nombre.toLowerCase() == leguminosaIngresada);
+                const leguminosaIngresada = prompt("Ingresa el alimento que buscas:").toLowerCase();
+                const leguminosaEncontrada = leguminosas.find (leguminosa => leguminosa.nombre.toLowerCase() == leguminosaIngresada);
                     if(leguminosaEncontrada) {
                     console.log (`Si quieres comer: ${leguminosaEncontrada.nombre}, la cantidad indicada por porción es: ${leguminosaEncontrada.cantidad} ${leguminosaEncontrada.medida} o ${leguminosaEncontrada.peso} ${leguminosaEncontrada.medidapeso}`);
-                    } else {
+                    const nuevoAlimento4 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento4 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
+                } else {
                     console.log(`Lo sentimos, ${leguminosaEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento4 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento4 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } 
             } else if (grupoDeAlimento === 5){
-                    const origenAnimalIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
-                    const origenAnimalEncontrado = origenAnimal.find (origenAnimales => origenAnimales.nombre.toLowerCase() == origenAnimalIngresado);
+                const origenAnimalIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
+                const origenAnimalEncontrado = origenAnimal.find (origenAnimales => origenAnimales.nombre.toLowerCase() == origenAnimalIngresado);
                     if(origenAnimalEncontrado) {
                     console.log (`Si quieres comer: ${origenAnimalEncontrado.nombre}, la cantidad indicada por porción es: ${origenAnimalEncontrado.cantidad} ${origenAnimalEncontrado.medida} o ${origenAnimalEncontrado.peso} ${lorigenAnimalEncontrado.medidapeso}`);
-                    } else {
+                    const nuevoAlimento5 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento5 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
+                } else {
                     console.log(`Lo sentimos, ${origenAnimalEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento5 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento5 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } 
             } else if (grupoDeAlimento === 6){
-                    const lacteoIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
-                    const lacteoEncontrado = lacteos.find (lacteo => lacteo.nombre.toLowerCase() == lacteoIngresado);
+                const lacteoIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
+                const lacteoEncontrado = lacteos.find (lacteo => lacteo.nombre.toLowerCase() == lacteoIngresado);
                     if(lacteoEncontrado) {
                     console.log (`Si quieres comer: ${lacteoEncontrado.nombre}, la cantidad indicada por porción es: ${lacteoEncontrado.cantidad} ${lacteoEncontrado.medida} o ${lacteoEncontrado.peso} ${lacteoEncontrado.medidapeso}`);
+                    const nuevoAlimento6 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento6 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } else {
                     console.log(`Lo sentimos, ${lacteoEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento6 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento6 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } 
             } else if (grupoDeAlimento === 7){
-                    const azucarIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
-                    const azucarEncontrado = azucar.find (azucares => azucares.nombre.toLowerCase() == azucarIngresado);
+                const azucarIngresado = prompt("Ingresa el alimento que buscas:").toLowerCase();
+                const azucarEncontrado = azucar.find (azucares => azucares.nombre.toLowerCase() == azucarIngresado);
                     if(azucarEncontrado) {
                     console.log (`Si quieres comer: ${azucarEncontrado.nombre}, la cantidad indicada por porción es: ${azucarEncontrado.cantidad} ${azucarEncontrado.medida} o ${azucarEncontrado.peso} ${azucarEncontrado.medidapeso}`);
+                    const nuevoAlimento7 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento7 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } else {
                     console.log(`Lo sentimos, ${azucarEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento7 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento7 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } 
             } else if (grupoDeAlimento === 8){
-                    const grasaIngresada = prompt("Ingresa el alimento que buscas:").toLowerCase();
-                    const grasaEncontrada = grasas.find (grasa => grasa.nombre.toLowerCase() == grasaIngresada);
+                const grasaIngresada = prompt("Ingresa el alimento que buscas:").toLowerCase();
+                const grasaEncontrada = grasas.find (grasa => grasa.nombre.toLowerCase() == grasaIngresada);
                     if(grasaEncontrada) {
                     console.log (`Si quieres comer: ${grasaEncontrada.nombre}, la cantidad indicada por porción es: ${grasaEncontrada.cantidad} ${grasaEncontrada.medida} o ${agrasaEncontrada.peso} ${grasaEncontrada.medidapeso}`);
+                    const nuevoAlimento8 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(nuevoAlimento8 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } else {
                     console.log(`Lo sentimos, ${grasaEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    const noEncontradoNuevoAlimento8 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
+                        if(noEncontradoNuevoAlimento8 === 1) {
+                        buscarAlimentosPaciente ();
+                        } else {
+                        alert ("Vuelve pronto");
+                        Bienvenida ();
+                        }
                     } 
             } else {
+                alert ("Vuelve pronto");
                 Bienvenida();
             }
 }
