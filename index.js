@@ -441,64 +441,104 @@ function porcionarAlimentoPaciente () {
             porcion.porcionarCantidad();
             porcion.porcionarPeso ();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        
     } else if (grupoDeAlimento === 2){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción indicada por tu Nutri?"));
         for (const porcion of verduras){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        console.table(verduras);
     } else if (grupoDeAlimento === 3){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción indicada por tu Nutri?"));
         for (const porcion of cereales){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        console.table(cereales);
     } else if (grupoDeAlimento === 4){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción indicada por tu Nutri?"));
         for (const porcion of leguminosas){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        console.table(leguminosas);
     } else if (grupoDeAlimento === 5){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción indicada por tu Nutri?"));
         for (const porcion of origenAnimal){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        console.table(origenAnimal);
     } else if (grupoDeAlimento === 6){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción indicada por tu Nutri?"));
         for (const porcion of lacteos){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        console.table(lacteos);
     } else if (grupoDeAlimento === 7){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción indicada por tu Nutri?"));
         for (const porcion of azucar){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        console.table(azucar);
     } else if (grupoDeAlimento === 8){
         porcionIngresada = parseInt(prompt ("¿Cuál es la porción indicada por tu Nutri?"));
         for (const porcion of grasas){
             porcion.porcionarCantidad();
             porcion.porcionarPeso();
             porcion.resultadoPaciente ();
+        } const salirDeFrutas = parseInt (prompt ("¿Quiere saber más porciones de otro grupo de alimentos?  \n\ 1: Sí \n\ 2: No"));
+        if (salirDeFrutas ===1) {
+            porcionarAlimentoPaciente ();
+        } else {
+            alert ("Vuelve pronto");
+            Bienvenida ();
         }
-        console.table(grasas);
     } else if (grupoDeAlimento === 0){
         alert ("Hasta pronto");
         Bienvenida();
@@ -524,7 +564,7 @@ function buscarAlimentosPaciente (){
                             Bienvenida ();
                         }
                     } else {
-                    console.log(`Lo sentimos, ${frutaEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${frutaIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento1 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento1 === 1) {
                         buscarAlimentosPaciente ();
@@ -546,7 +586,7 @@ function buscarAlimentosPaciente (){
                             Bienvenida ();
                         }
                 } else {
-                    console.log(`Lo sentimos, ${verduraEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${verduraIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento2 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento2 === 1) {
                             buscarAlimentosPaciente ();
@@ -568,7 +608,7 @@ function buscarAlimentosPaciente (){
                         Bienvenida ();
                         }
                 } else {
-                    console.log(`Lo sentimos, ${cerealEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${cerealIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento3 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento3 === 1) {
                         buscarAlimentosPaciente ();
@@ -590,7 +630,7 @@ function buscarAlimentosPaciente (){
                         Bienvenida ();
                         }
                 } else {
-                    console.log(`Lo sentimos, ${leguminosaEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${leguminosaIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento4 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento4 === 1) {
                         buscarAlimentosPaciente ();
@@ -612,7 +652,7 @@ function buscarAlimentosPaciente (){
                         Bienvenida ();
                         }
                 } else {
-                    console.log(`Lo sentimos, ${origenAnimalEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${origenAnimalIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento5 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento5 === 1) {
                         buscarAlimentosPaciente ();
@@ -634,7 +674,7 @@ function buscarAlimentosPaciente (){
                         Bienvenida ();
                         }
                     } else {
-                    console.log(`Lo sentimos, ${lacteoEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${lacteoIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento6 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento6 === 1) {
                         buscarAlimentosPaciente ();
@@ -656,7 +696,7 @@ function buscarAlimentosPaciente (){
                         Bienvenida ();
                         }
                     } else {
-                    console.log(`Lo sentimos, ${azucarEncontrado} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${azucarIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento7 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento7 === 1) {
                         buscarAlimentosPaciente ();
@@ -678,7 +718,7 @@ function buscarAlimentosPaciente (){
                         Bienvenida ();
                         }
                     } else {
-                    console.log(`Lo sentimos, ${grasaEncontrada} aun no está en el sistema, contacta a tu Nutriologa`);
+                    console.log(`Lo sentimos, ${grasaIngresada} aun no está en el sistema, contacta a tu Nutriologa`);
                     const noEncontradoNuevoAlimento8 = parseInt (prompt ("¿Deseas buscar otro alimento? \n\ 1: Sí \n\ 2: No "));
                         if(noEncontradoNuevoAlimento8 === 1) {
                         buscarAlimentosPaciente ();
